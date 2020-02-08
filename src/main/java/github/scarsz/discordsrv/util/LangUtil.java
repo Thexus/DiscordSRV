@@ -37,6 +37,7 @@ import java.util.Map;
  * <p>Russian translations by DmitryRendov</p>
  * <p>Estonian translations by Madis0</p>
  * <p>Chinese translations by Kizajan</p>
+ * <p>Hungarian translations by Thexus</p>
  */
 public class LangUtil {
 
@@ -196,6 +197,21 @@ public class LangUtil {
                     "6. 重啟伺服器\n" +
                     "\n" +
                     "\n");
+            put(Language.HU,
+                    "\n" +
+                    "\n" +
+                    "ASM 4-en próbálod használni a DiscordSRV-t. A DiscordSRV-nek ASM 5 kell a megfelelő működéshez.\n" +
+                    "DiscordSRV NEM FOG MŰKÖDNI ASM 5 NÉLKÜL. Hibáztasd a szerver fejlesztőit hogy elavult programkönyvtárakat használnak.\n" +
+                    "\n" +
+                    "Hogyan frissíts ASM 5-re:\n" +
+                    "1. Menj a szervered {specialsourcefolder} mappájába\n" +
+                    "2. Töröld ki a SpecialSource-1.7-SNAPSHOT.jar állományt\n" +
+                    "3. Töltsd le a SpecialSource v1.7.4-t innen: http://central.maven.org/maven2/net/md-5/SpecialSource/1.7.4/SpecialSource-1.7.4.jar\n" +
+                    "4. Másold be a jar állományt a szerver {specialsourcefolder} mappájába\n" +
+                    "5. Nevezed át az előbb átmásolt állományt erre: SpecialSource-1.7-SNAPSHOT.jar\n" +
+                    "6. Indítsd újra a szervert\n" +
+                    "\n" +
+                    "\n");
         }}), CONSOLE_FORWARDING_ASSIGNED_TO_CHANNEL(new HashMap<Language, String>() {{
             put(Language.EN, "Console forwarding assigned to channel");
             put(Language.FR, "Réacheminement de la console affecté au canal");
@@ -207,6 +223,7 @@ public class LangUtil {
             put(Language.RU, "Вывод консоли успешно перенаправлен в канал");
             put(Language.ET, "Konsooliedastus on kanalile määratud");
             put(Language.ZH, "控制台轉送已指派至頻道");
+            put(Language.HU, "Konzolos átirányítás beállítva a szobára");
         }}), FOUND_SERVER(new HashMap<Language, String>() {{
             put(Language.EN, "Found server");
             put(Language.FR, "Serveur trouvé");
@@ -218,6 +235,7 @@ public class LangUtil {
             put(Language.RU, "Сервер найден");
             put(Language.ET, "Server leitud");
             put(Language.ZH, "已找到伺服器");
+            put(Language.EN, "Szerver megtalálva");
         }}), NOT_FORWARDING_CONSOLE_OUTPUT(new HashMap<Language, String>() {{
             put(Language.EN, "Console channel ID was invalid, not forwarding console output");
             put(Language.FR, "L'ID du channel de la console est faux, l'envoie des messages de la console ne sera pas effectué");
