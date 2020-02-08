@@ -235,7 +235,7 @@ public class LangUtil {
             put(Language.RU, "Сервер найден");
             put(Language.ET, "Server leitud");
             put(Language.ZH, "已找到伺服器");
-            put(Language.EN, "Szerver megtalálva");
+            put(Language.HU, "Szerver megtalálva");
         }}), NOT_FORWARDING_CONSOLE_OUTPUT(new HashMap<Language, String>() {{
             put(Language.EN, "Console channel ID was invalid, not forwarding console output");
             put(Language.FR, "L'ID du channel de la console est faux, l'envoie des messages de la console ne sera pas effectué");
@@ -247,6 +247,7 @@ public class LangUtil {
             put(Language.RU, "Неверный ID канала для перенаправления вывода консоли, сообщения консоли не будут пересылаться");
             put(Language.ET, "Konsoolikanali ID oli sobimatu, konsooli väljundit ei edastata");
             put(Language.ZH, "錯誤的控制台頻道ID, 並未轉送控制台輸出。");
+            put(Language.HU, "Konzolos szoba azonosítója érvénytelen, konzol kimenete nem lesz átirányítva");
         }}), SHUTDOWN_COMPLETED(new HashMap<Language, String>() {{
             put(Language.EN, "Shutdown completed in {ms}ms");
             put(Language.FR, "Arrêt effectué en {ms}ms");
@@ -258,6 +259,7 @@ public class LangUtil {
             put(Language.RU, "Отключение завершено за {ms}мс");
             put(Language.ET, "Väljalülitus teostatud {ms}ms jooksul");
             put(Language.ZH, "伺服器已關閉，耗時{ms}ms");
+			put(Language.HU, "{ms}ms alatt állt le a szerver");
         }}), API_LISTENER_SUBSCRIBED(new HashMap<Language, String>() {{
             put(Language.EN, "API listener {listenername} subscribed ({methodcount} methods)");
             put(Language.FR, "API listener {listenername} associé à ({methodcount} methods)");
@@ -269,6 +271,7 @@ public class LangUtil {
             put(Language.RU, "API listener {listenername} подписан на ({methodcount} методы)");
             put(Language.ET, "API listener {listenername} on kuulamas ({methodcount} meetodit)");
             put(Language.ZH, "API listener {listenername} 已訂閱 ({methodcount} 種方案)");
+			put(Language.HU, "{listenername} nevű API-hallgató feliratkozott ({methodcount} függvény)");
         }}), API_LISTENER_UNSUBSCRIBED(new HashMap<Language, String>() {{
             put(Language.EN, "API listener {listenername} unsubscribed");
             put(Language.FR, "API listener {listenername} n'est plus associé");
@@ -280,6 +283,7 @@ public class LangUtil {
             put(Language.RU, "API listener {listenername} деактивирован");
             put(Language.ET, "API listener {listenername} kuulamine lõpetatud");
             put(Language.ZH, "API listener {listenername} 已取消訂閱");
+			put(Language.HU, "{listenername} nevű API-hallgató leiratkozott");
         }}), API_LISTENER_THREW_ERROR(new HashMap<Language, String>() {{
             put(Language.EN, "DiscordSRV API Listener {listenername} threw an error");
             put(Language.FR, "DiscordSRV API Listener {listenername} a causé une erreur");
@@ -291,6 +295,7 @@ public class LangUtil {
             put(Language.RU, "DiscordSRV API Listener {listenername} сгенерировал ошибку");
             put(Language.ET, "DiscordSRV API Listener {listenername} tagastas veateate");
             put(Language.ZH, "DiscordSRV API Listener {listenername} 發生錯誤");
+			put(Language.HU, "{listenername} nevű API-hallgató hibát jelez");
         }}), API_LISTENER_METHOD_NOT_ACCESSIBLE(new HashMap<Language, String>() {{
             put(Language.EN, "DiscordSRV API Listener {listenername} method {methodname} was inaccessible despite efforts to make it accessible");
             put(Language.FR, "DiscordSRV API Listener {listenername} méthode {methodname} est inaccessible malgré les efforts pour la rendre accessible");
@@ -302,6 +307,7 @@ public class LangUtil {
             put(Language.RU, "DiscordSRV API Listener {listenername} метод {methodname} был недоступен, несмотря на все наши усилия сделать его доступным");
             put(Language.ET, "DiscordSRV API Listener {listenername} meetod {methodname} polnud ligipääsetav, kuigi prooviti ligipääsetavaks teha");
             put(Language.ZH, "DiscordSRV API Listener {listenername} 方案 {methodname} 無法存取");
+			put(Language.HU, "{listenername} nevű API-hallgató {methodname} nevű függvényneve elérhetetlen, annak ellenére hogy elérhetővé próbáltuk tenni");
         }}), HTTP_FAILED_TO_FETCH_URL(new HashMap<Language, String>() {{
             put(Language.EN, "Failed to fetch URL");
             put(Language.FR, "Impossible de récuperer l'URL");
@@ -313,6 +319,7 @@ public class LangUtil {
             put(Language.RU, "Ошибка получения URL");
             put(Language.ET, "URLi hankimine ebaõnnestus");
             put(Language.ZH, "無法取得URL");
+			put(Language.HU, "Nem sikerült az URL-t lekérni");
         }}), HTTP_FAILED_TO_DOWNLOAD_URL(new HashMap<Language, String>() {{
             put(Language.EN, "Failed to download URL");
             put(Language.FR, "Impossible de télécharger l'URL");
@@ -324,6 +331,7 @@ public class LangUtil {
             put(Language.RU, "Ошибка загрузки URL");
             put(Language.ET, "URLi allalaadimine ebaõnnestus");
             put(Language.ZH, "自URL下載失敗");
+			put(Language.HU, "Nem sikerült az URL-t letölteni");
         }}), TOWNY_NOT_AUTOMATICALLY_ENABLING_CHANNEL_HOOKING(new HashMap<Language, String>() {{
             put(Language.EN, "Not automatically enabling hooking for TownyChat channels");
             put(Language.FR, "La compatibilité avec TownyChat n'est pas automatique");
@@ -335,6 +343,7 @@ public class LangUtil {
             put(Language.RU, "Отключен автоматический перехват каналов TownyChat");
             put(Language.ET, "TownyChat'i kanalite automaatne haakimine pole lubatud");
             put(Language.ZH, "未自動啟用鉤取TownyChat頻道");
+			put(Language.HU, "Magától nem kapcsol a TownyChat szobáira");
         }}), TOWNY_AUTOMATICALLY_ENABLED_LINKING_FOR_CHANNELS(new HashMap<Language, String>() {{
             put(Language.EN, "Automatically enabled hooking for {amountofchannels} TownyChat channels");
             put(Language.FR, "Accrochage automatique des {amountofchannels} channels de TownyChat");
@@ -346,6 +355,7 @@ public class LangUtil {
             put(Language.RU, "Включён перехват {amountofchannels} TownyChat каналов");
             put(Language.ET, "Lubatud {amountofchannels} TownyChat'i kanali automaatne hankimine");
             put(Language.ZH, "已自動啟用鉤取 {amountofchannels} 個TownyChat頻道");
+			put(Language.HU, "Magától mostantól kapcsol a TownyChat {amountofchannels} szobájára");
         }}), TOWNY_AUTOMATICALLY_ENABLED_LINKING_FOR_NO_CHANNELS(new HashMap<Language, String>() {{
             put(Language.EN, "No TownyChat channels were automatically hooked. This might cause problems...");
             put(Language.FR, "Aucun channels de Towny Chat n'ont été trouvé. Cela peut causer des problèmes...");
@@ -357,6 +367,7 @@ public class LangUtil {
             put(Language.RU, "TownyChat каналы не обнаружены. Это может вызвать некоторые проблемы...");
             put(Language.ET, "Ühtegi TownyChat'i kanalit ei haagitud automaatselt. See võib põhjustada probleeme...");
             put(Language.ZH, "未自動鉤取任何TownyChat頻道， 這可能會導致問題...。");
+			put(Language.HU, "Egy TownyChat szoba se lett magától összekötve. Ez gondokhoz vezethet...");
         }}), PLUGIN_HOOK_ENABLING(new HashMap<Language, String>() {{
             put(Language.EN, "Enabling {plugin} hook");
             put(Language.FR, "Activation de l'accrochage du plugin {plugin}");
@@ -368,6 +379,7 @@ public class LangUtil {
             put(Language.RU, "Активация {plugin} подключения");
             put(Language.ET, "{plugin} haakimine lubatud");
             put(Language.ZH, "啟用鉤取 {plugin}");
+			put(Language.HU, "{plugin} összeköttetésének bekapcsolása");
         }}), PLUGIN_HOOKS_NOT_ENABLED(new HashMap<Language, String>() {{
             put(Language.EN, "No chat plugin hooks enabled");
             put(Language.FR, "Aucun accrochage de plugin activé");
@@ -379,6 +391,7 @@ public class LangUtil {
             put(Language.RU, "Плагинов для управления игровым чатом не обнаружено");
             put(Language.ET, "Ühegi vestlusplugina haakimine pole lubatud");
             put(Language.ZH, "未啟用鉤取任何聊天插件");
+			put(Language.HU, "Nincsen bekapcsolva csevegő-plugin összeköttetés");
         }}), CHAT_CANCELLATION_DETECTOR_ENABLED(new HashMap<Language, String>() {{
             put(Language.EN, "Chat event cancellation detector has been enabled");
             put(Language.FR, "Détecteur d'annulation d'événement de chat vient d'être activé");
@@ -390,6 +403,7 @@ public class LangUtil {
             put(Language.RU, "Включен детектор отмены сообщений чата");
             put(Language.ET, "Vestlussündmuste tühistamise tuvastaja on lubatud");
             put(Language.ZH, "聊天事件撤銷檢測器已啟動");
+			put(Language.HU, "Csevegőbeli eseménymegszüntetés-figyelő bekapcsolva");
         }}), INVALID_CONFIG(new HashMap<Language, String>() {{
             put(Language.EN, "Invalid config.yml");
             put(Language.FR, "config.yml invalide");
