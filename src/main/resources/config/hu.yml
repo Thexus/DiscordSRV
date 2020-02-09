@@ -48,32 +48,32 @@ DisabledPluginHooks: []
 
 # Játékadatok
 # Beállítja a "Playing: ______" kimutatást a robotnak.
-# Can be a single, static value, or cycle through multiple different options
-# You can preface the status with "playing", "watching", or "listening to" to set the activity type
-# PlaceholderAPI placeholders are supported
+# Lehet egy állandó érték, vagy váltogathat több között
+# Át tudod állaítani a "playing", "watching", vagy "listening to" részt
+# PlaceholderAPI támogatott
 #
-# DiscordGameStatus: Text to display. Can be a single value e.g. "Minecraft", or multiple values e.g. ["Minecraft", "yourip.changeme.com"]
-# StatusUpdaterRateInMinutes: How frequently to cycle the status
+# DiscordGameStatus: a kiírt szöveg. Lehet egyetlen érték, pl.: "Minecraft", vagy több értzék, pl.: ["Minecraft", "sajátip.változtassmeg.hu"]
+# StatusUpdaterRateInMinutes: milyen gyorsan váltogasson
 DiscordGameStatus: "Minecraft"
 StatusUpdateRateInMinutes: 2
 
-# Chat channel information
-# The chat channel is the text channel that all messages in-game will be sent to and all messages sent
-# to this channel on Discord will be sent in-game
+# Szobaadatok
+# Ez a szoba lesz az a szoba ahová a játékon belüli üzenetek érkezni fognak
+# a Discord-on ide küldött üzenetek pedig a játékon belül fognak megjelenni
 #
-# DiscordChatChannelDiscordToMinecraft: whether or not to send messages in the chat channel to the server chat
-# DiscordChatChannelMinecraftToDiscord: whether or not to send messages in the server chat to the chat channel
-# DiscordChatChannelTruncateLength: the maximum length of messages from Discord to be sent to Minecraft
-# DiscordChatChannelTranslateMentions: whether or not to translate mentions like @Person for Minecraft to Discord messages
-# DiscordChatChannelPrefix: the character(s) required to prefix a message for it to be sent from Minecraft to Discord (example "!")
-# DiscordChatChannelRolesAllowedToUseColorCodesInChat: list of roles allowed to use color/format codes in Discord to Minecraft chat
-# DiscordChatChannelBroadcastDiscordMessagesToConsole: whether or not to print processed discord messages to the console
-# DiscordChatChannelRequireLinkedAccount: whether or not to require players have their Discord account linked to their Minecraft to have their Discord messages sent to Minecraft
-# DiscordChatChannelBlockBots: whether or not bots should be blocked from Discord -> MC chat
-# DiscordChatChannelBlockedIds: ids of discord users (or bots) that should not have their messages processed & sent to MC
-# DiscordChatChannelColorTranslations: hex representations of Discord roles to be matched with for showing role colors in-game with their in-game equivalent
-# DiscordChatChannelRolesSelectionAsWhitelist: if the following list should be treated as a whitelist (true) or a blacklist (false)
-# DiscordChatChannelRolesSelection: list of roles that are should be filtered from all of a user's roles
+# DiscordChatChannelDiscordToMinecraft: hogy küldje Discord-ról Minecraft-ba az üzeneteket
+# DiscordChatChannelMinecraftToDiscord: hogy Minecraft-ból Discord-ra küldje az üzeneteket
+# DiscordChatChannelTruncateLength: a leghosszabb üzenet amit Discord-ról Minecraft-ba lehet küldeni
+# DiscordChatChannelTranslateMentions: hogy átalakítsa a megszólításokat (mention) Minecraft-ból Discord-ra
+# DiscordChatChannelPrefix: a kellő előtag(ok) hogy az üzenetet Minecraft-ból Discord-ra érkezzen (pl.: "!")
+# DiscordChatChannelRolesAllowedToUseColorCodesInChat: hogy melyik rangok használhatják a színeket és egyéb formázást Discord-ról Minecraft-ba
+# DiscordChatChannelBroadcastDiscordMessagesToConsole: hogy kijelezze a küldött üzeneteket konzolon
+# DiscordChatChannelRequireLinkedAccount: hogy kelljen-e a játékosoknak összekötnie a Discord- és Minecraft-fiókjukat hogy az üzeneteik el legyenek küldve Minecraft-ba
+# DiscordChatChannelBlockBots: hogy a robotok üzenetei le legyenek tiltva Discord-ról Minecraft-ba
+# DiscordChatChannelBlockedIds: azoknak a Discord-felhasználóknak az azonosítóik akiknek az üzenetei ne legyenek elküldve Minecraft-ba
+# DiscordChatChannelColorTranslations: a színek jelei hogy mire kell állítani Discord-on a rangok színei pontosan megjelenjenek játékon belül
+# DiscordChatChannelRolesSelectionAsWhitelist: hogy a következő lista egy fekete- (false) vagy egy fehérlista (true)
+# DiscordChatChannelRolesSelection: egy lista azokról a rangok azonosítóiról amelyeket szűrni kell
 #
 DiscordChatChannelDiscordToMinecraft: true
 DiscordChatChannelMinecraftToDiscord: true
@@ -111,21 +111,21 @@ DiscordChatChannelColorTranslations: {
 DiscordChatChannelRolesSelectionAsWhitelist: false
 DiscordChatChannelRolesSelection: ["Don't show me!", "Misc role"]
 
-# Console channel information
-# The console channel is the text channel that receives messages which are then run as server commands
-# by the console as well as having the server's console being streamed to line by line
+# Kozolszoba
+# A konzolszobában lehet parancsokat küldeni és kapni
 #
-# You can customize the message including removing timestamps in messages.yml
 #
-# DiscordConsoleChannelLogRefreshRateInSeconds: rate in seconds between sending lines from the console
-# DiscordConsoleChannelUsageLog: the file that logs all commands being executed by users in the console channel
-# DiscordConsoleChannelBlacklistActsAsWhitelist: whether or not the blacklisted commands list acts as a whitelist instead of blacklist
-# DiscordConsoleChannelBlacklistedCommands: phrases wrapped in quotation marks that users should not be able to send as commands to the console
-# DiscordConsoleChannelDoNotSendPhrasesActsAsWhitelist: whether or not the do not send phrases list acts as a whitelist instead of blacklist
-# DiscordConsoleChannelDoNotSendPhrases: phrases wrapped in quotation marks that should not be sent to the console channel
-# DiscordConsoleChannelRegexFilter: the regex filter to be applied to console lines being sent to Discord
-# DiscordConsoleChannelRegexReplacement: what the regex filter will replace with where matches are found
-# DiscordConsoleChannelLevels: levels to send to console channel via appender
+# Személyre tudod szabni az üzeneteket, például hogy eltávolítod az időt, a messages.yml-ben
+#
+# DiscordConsoleChannelLogRefreshRateInSeconds: hány másodperc alatt küldi a parancsokat a konzolról
+# DiscordConsoleChannelUsageLog: a fájl neve ahol a végrehajtott parancsokat tárolja a plugin
+# DiscordConsoleChannelBlacklistActsAsWhitelist: hogy a következő lista egy fehér- vagy feketelista
+# DiscordConsoleChannelBlacklistedCommands: azok a parancsok amelyeket a szobában nem lehet küldeni
+# DiscordConsoleChannelDoNotSendPhrasesActsAsWhitelist: hogy a következő lista egy fehér- vagy feketelista
+# DiscordConsoleChannelDoNotSendPhrases: azok a szavak amelyeket a szobában nem lehet küldeni
+# DiscordConsoleChannelRegexFilter: a regex-szűrő ami a konzolszobába érkező üzeneteket szűri
+# DiscordConsoleChannelRegexReplacement: amit a regex.szűrő helyettesíteni fog
+# DiscordConsoleChannelLevels: szintek amelyekkel lehet üzeneteket küldeni a konzolszobába
 #
 DiscordConsoleChannelLogRefreshRateInSeconds: 5
 DiscordConsoleChannelUsageLog: "DiscordConsole.log"
