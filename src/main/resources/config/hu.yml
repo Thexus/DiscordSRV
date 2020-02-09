@@ -1,22 +1,22 @@
-# DiscordSRV Configuration
-# Need help? Join our Discord, https://discordsrv.com/discord
+# DiscordSRV beállításai
+# Segítségre van szükséged? Keress fel minket Discord-on: https://discordsrv.com/discord
 
-# Don't touch pls
+# Ehhez ne nyúlj
 ConfigVersion: ${project.version}
 
-# Bot token; don't know what this is? Look at the video on the plugin page for instructions
+# Bot token; nem tudod mi ez? Nézd meg a videót a plugin oldalán
 BotToken: "BOTTOKEN"
 
-# Channel links from game to Discord
-# syntax is Channels: {"in-game channel name": "numerical channel ID from Discord", "another in-game channel name": "another numerical channel ID from Discord"}
-# The first channel pair specified in this config option will be the "main" channel, used for sending player joins/quits/deaths/achievements/etc
+# Szobák összekapcsolása a játékból Discord-ra
+# a következőt fogadják el: {"játékon belül megjelenő szobanév": "szoba azonosítója Discord-ról", "egy másik szobanév": "egy másik azonosító"}
+# Az első beállított szoba lesz a "legfőbb", ide jön ha egy játékos fellép/kilép/meghal/elér egy mérföldkövet/stb
 #
 Channels: {"global": "000000000000000000"}
 
-# Console channel numerical ID (NOT NAME), leave blank to disable the console channel all together
+# Konzolos (irányítási) szoba azonosítója, hagyd üresen ha nem szeretnél konzolszobát
 DiscordConsoleChannelId: "000000000000000000"
 
-# Debug options, don't touch unless needed
+# Debug, ne piszkáld ha nem értesz hozzá
 #
 # DebugLevel: 0 = no debug, 1 = debug, 2 = debug with stack traces
 #
@@ -41,13 +41,13 @@ PrintGuildsAndChannels: true
 ForceTLSv12: true
 ParseEmojisToNames: true
 
-# Disabled plugin hooks
-# Generally, unless you have a reason to touch this, don't
+# Kikapcsolt plugin-ok
+# Általában ha nincs okod ezt piszkálni, akkor ne tedd
 #
 DisabledPluginHooks: []
 
-# Game Information
-# Sets the "Playing: ______" indicator for the bot.
+# Játékadatok
+# Beállítja a "Playing: ______" kimutatást a robotnak.
 # Can be a single, static value, or cycle through multiple different options
 # You can preface the status with "playing", "watching", or "listening to" to set the activity type
 # PlaceholderAPI placeholders are supported
