@@ -271,7 +271,7 @@ public class LangUtil {
             put(Language.RU, "API listener {listenername} подписан на ({methodcount} методы)");
             put(Language.ET, "API listener {listenername} on kuulamas ({methodcount} meetodit)");
             put(Language.ZH, "API listener {listenername} 已訂閱 ({methodcount} 種方案)");
-	          put(Language.HU, "{listenername} nevű API-hallgató feliratkozott ({methodcount} függvény)");
+            put(Language.HU, "{listenername} nevű API-hallgató feliratkozott ({methodcount} függvény)");
         }}), API_LISTENER_UNSUBSCRIBED(new HashMap<Language, String>() {{
             put(Language.EN, "API listener {listenername} unsubscribed");
             put(Language.FR, "API listener {listenername} n'est plus associé");
@@ -283,7 +283,7 @@ public class LangUtil {
             put(Language.RU, "API listener {listenername} деактивирован");
             put(Language.ET, "API listener {listenername} kuulamine lõpetatud");
             put(Language.ZH, "API listener {listenername} 已取消訂閱");
-	          put(Language.HU, "{listenername} nevű API-hallgató leiratkozott");
+            put(Language.HU, "{listenername} nevű API-hallgató leiratkozott");
         }}), API_LISTENER_THREW_ERROR(new HashMap<Language, String>() {{
             put(Language.EN, "DiscordSRV API Listener {listenername} threw an error");
             put(Language.FR, "DiscordSRV API Listener {listenername} a causé une erreur");
@@ -295,7 +295,7 @@ public class LangUtil {
             put(Language.RU, "DiscordSRV API Listener {listenername} сгенерировал ошибку");
             put(Language.ET, "DiscordSRV API Listener {listenername} tagastas veateate");
             put(Language.ZH, "DiscordSRV API Listener {listenername} 發生錯誤");
-	          put(Language.HU, "{listenername} nevű API-hallgató hibát jelez");
+            put(Language.HU, "{listenername} nevű API-hallgató hibát jelez");
         }}), API_LISTENER_METHOD_NOT_ACCESSIBLE(new HashMap<Language, String>() {{
             put(Language.EN, "DiscordSRV API Listener {listenername} method {methodname} was inaccessible despite efforts to make it accessible");
             put(Language.FR, "DiscordSRV API Listener {listenername} méthode {methodname} est inaccessible malgré les efforts pour la rendre accessible");
