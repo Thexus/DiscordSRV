@@ -137,19 +137,19 @@ DiscordConsoleChannelRegexFilter: ""
 DiscordConsoleChannelRegexReplacement: ""
 DiscordConsoleChannelLevels: [info, warn, error]
 
-# Chat channel command execute command
-# These options control the ability to say "!c kick Notch", or whatever the prefix is to run a command,
-# as the console, from a registered chat channel.
+# Csevegőszobabeli parancsok küldése
+# Ezek a lehetőségek szabályozzák a "!c kick Notch" vagy bármilyen előtagos parancs futtatásának lehetőségét,
+# mint konzol, regisztrált csevegőszobából.
 #
-# DiscordChatChannelConsoleCommandEnabled: whether or not to allow console commands from a chat channel.
-# DiscordChatChannelConsoleCommandNotifyErrors: whether or not to send a user who tries to run a command without permission that they don't have permission
-# DiscordChatChannelConsoleCommandPrefix: prefix to use for console commands. e.g. "!c tps"
-# DiscordChatChannelConsoleCommandRolesAllowed: the user roles that are allowed to execute server commands from the chat channel
-# DiscordChatChannelConsoleCommandWhitelist: list of commands that are able to be ran with DiscordChatChannelConsoleCommandPrefix
-# DiscordChatChannelConsoleCommandWhitelistBypassRoles: list of roles that bypass the whitelist
-# DiscordChatChannelConsoleCommandWhitelistActsAsBlacklist: should the command whitelist act as a blacklist instead
-# DiscordChatChannelConsoleCommandExpiration: time in seconds until a sent command output is automatically removed by the bot. set to 0 to disable expiration.
-# DiscordChatChannelConsoleCommandExpirationDeleteRequest: whether or not to delete the message of the person that originally issued the command
+# DiscordChatChannelConsoleCommandEnabled: konzolparancsok engedélyezése a csevegőcsatornákról.
+# DiscordChatChannelConsoleCommandNotifyErrors: elküld-e vagy sem egy figyelmeztetést olyan felhasználónak, aki engedély nélkül próbál futtatni egy parancsot, ha nincs engedélyük
+# DiscordChatChannelConsoleCommandPrefix: a konzolparancsokhoz használt előtag. pl.: "!c tps"
+# DiscordChatChannelConsoleCommandRolesAllowed: azok a felhasználói rangok, amelyek számára engedélyezett a csevegőszobába parancsokat küldeni
+# DiscordChatChannelConsoleCommandWhitelist: a DiscordChatChannelConsoleCommandPrefix beállítással futtatható parancsok listája
+# DiscordChatChannelConsoleCommandWhitelistBypassRoles: a fehérlistát megkerülő rangok listája
+# DiscordChatChannelConsoleCommandWhitelistActsAsBlacklist: a fentebbi fehérlista legyen-e feketelista
+# DiscordChatChannelConsoleCommandExpiration: idő másodpercben, amíg a robot magától kitörli a küldött parancsokat, 0-ra állítva nem törli
+# DiscordChatChannelConsoleCommandExpirationDeleteRequest: a parancsot kiadó üzenet törlése
 #
 DiscordChatChannelConsoleCommandEnabled: true
 DiscordChatChannelConsoleCommandNotifyErrors: true
@@ -161,119 +161,119 @@ DiscordChatChannelConsoleCommandWhitelistActsAsBlacklist: false
 DiscordChatChannelConsoleCommandExpiration: 0
 DiscordChatChannelConsoleCommandExpirationDeleteRequest: true
 
-# Chat channel player list command
-# All the config stuff for the player list command
+# Csevegőszobában a jelenleg fent lévő játékosok lekérése
+# Minden beállítás arra hogy a játékosok hogyan tudják lekérni a jelenleg fent lévő játékosokat
 #
-# DiscordChatChannelListCommandEnabled: whether the command is enabled
-# DiscordChatChannelListCommandMessage: the command people can type to get the player list
-# DiscordChatChannelListCommandExpiration: time in seconds until a sent player list message is automatically removed by the bot. set to 0 to disable expiration.
-# DiscordChatChannelListCommandExpirationDeleteRequest: whether or not to delete the message of the person that originally requested for the player list
+# DiscordChatChannelListCommandEnabled: ha a parancs engedélyezve van
+# DiscordChatChannelListCommandMessage: az emberek által beírt parancs a jelenleg fent lévő játékosok kilistázására
+# DiscordChatChannelListCommandExpiration: idő másodpercben, ami után a robot automatikusan kitörli a küldött üzenetet. 0-ra állítva nem törli
+# DiscordChatChannelListCommandExpirationDeleteRequest: törli-e vagy sem az üzenetet
 #
 DiscordChatChannelListCommandEnabled: true
 DiscordChatChannelListCommandMessage: "playerlist"
 DiscordChatChannelListCommandExpiration: 10
 DiscordChatChannelListCommandExpirationDeleteRequest: true
 
-# Chat channel blacklisted phrases & regex
+# A csevegőszobában feketelistán szereplő mondatok és regex
 #
-# DiscordChatChannelBlockedPhrases: phrases which if a message is sent in the chat channel containing a phrase here, the message won't be processed
-# DiscordChatChannelCutPhrases: phrases which if said in the Minecraft chat will be removed from the message before sending it to the chat channel
-# DiscordChatChannelRegex: regex to filter the chat going to Minecraft by
-# DiscordChatChannelRegexReplacement: replacement for above option
+# DiscordChatChannelBlockedPhrases: kifejezések, amelyeket tartalmazó üzenetek nem lesznek elküldve Minecraft-ból Discord-ra
+# DiscordChatChannelCutPhrases: kifejezések, amelyek le lesznek vágav elküldés előtt
+# DiscordChatChannelRegex: regex, hogy kiszűrje az üzeneteket Discord-ról Minecraft-ba
+# DiscordChatChannelRegexReplacement: a fentit pótolja
 #
 DiscordChatChannelBlockedPhrases: ["Online players (", "**No online players**"]
 DiscordChatChannelCutPhrases: ["@everyone", "@here"]
 DiscordChatChannelRegex: ""
 DiscordChatChannelRegexReplacement: ""
 
-# Channel topic updater settings
+# Szoba leírásának frissítése
 #
-# ChannelTopicUpdaterChannelTopicsAtShutdownEnabled: whether or not the channel topics should be changed at server shutdown at all
-# ChannelTopicUpdaterRateInMinutes: amount of minutes between automatically updating the channel topics with fresh information
+# ChannelTopicUpdaterChannelTopicsAtShutdownEnabled: a szoba leírásának megváltoztatása a szerver leállításakor
+# ChannelTopicUpdaterRateInMinutes: idő percekben, amíg a szoba leírása frissül
 #
 ChannelTopicUpdaterChannelTopicsAtShutdownEnabled: true
 ChannelTopicUpdaterRateInMinutes: 5
 
-# Discord canned responses
-# These are triggers (commands in a way) that will trigger a "canned response" to be sent as a reply to them
-# You should probably change these from their defaults or add your own
+# Discord-os előre leírt válaszok
+# Ezek olyan parancsok, amelyek egy előre leírt választ adnak
+# Meg kéne változtatnod az alaértelmezettet
 #
-# Syntax is {"TRIGGER": "RESPONSE", "TRIGGER": "RESPONSE", ...}
-# If you do not want any canned responses, set this to just {}
-# PlaceholderAPI placeholders are supported for the values
+# Így kell kinéznie: {"PARANCS": "VÁLASZ", "PARANCS": "VÁLASZ", ...}
+# Ha szeretnéd ezt kikapcsolni, hagyd üresen: {}
+# PlaceholderAPI-t támogat
 #
-DiscordCannedResponses: {"!ip": "yourserveripchange.me", "!site": "http://yoursiteurl.net"}
+DiscordCannedResponses: {"!ip": "ateszerverednekazipje.változtassmeg", "!oldal": "http://asajátoldalad.hu"}
 
-# Minecraft to Discord account linking
-# These are the config options pertaining to how linking a Minecraft account to a Discord account functions
+# Minecraft-Discord fiókok összekapcsolása
+# Ezek a beállítások vonatkoznak arra, hogy miként lehet a Minecraft-fiókot a Discord-fiókhoz kapcsolni
 #
-# MinecraftDiscordAccountLinkedConsoleCommands: commands to run when an account is linked, see below for possible placeholders
-# MinecraftDiscordAccountUnlinkedConsoleCommands: commands to run when an account is unlinked, see below for possible placeholders
-# %minecraftplayername%: player's Minecraft username
-#                         example: Notch
-# %minecraftuuid%:       player's uuid
-#                         example: you know what a uuid looks like
-# %discordid%:           linked discord account's id
-#                         example: 12345678901234567890
-# %discordname%:         linked discord account's username
-#                         example: Notch
+# MinecraftDiscordAccountLinkedConsoleCommands: a fiókok összekapcsolásakor futó parancsok
+# MinecraftDiscordAccountUnlinkedConsoleCommands: parancsok a fiókok lekapcsolásakor történő futtatáshoz
+# %minecraftplayername%: a játékos Minecraft-felhasználóneve
+# példa: Notch
+# %minecraftuuid%: a játékos-uuid
+# példa: tudodnod kéne, hogy hogy néz ki egy uuid
+# %discordid%: összekapcsolt Discord-fiók azonosítója
+# példa: 12345678901234567890
+# %discordname%: összekapcsolt Discord-fiók felhasználóneve
+# példa: Notch
 #
-# MinecraftDiscordAccountLinkedRoleToAddUserTo: the name of a discord role to add a discord user to when they link their account
-# MinecraftDiscordAccountLinkedAllowRelinkBySendingANewCode: allows sending a new code to the bot to unlink and relink with the new code
+# MinecraftDiscordAccountLinkedRoleToAddUserTo: a rang neve, amelyet a felhasználóhoz hozzáad a robot a fiók összekapcsolásánál
+# MinecraftDiscordAccountLinkedAllowRelinkBySendingANewCode: lehetővé teszi egy új kód küldését a robothoz hogy szétkapcsold és újrakapcsold a felhasználóid
 #
 MinecraftDiscordAccountLinkedConsoleCommands: ["", "", ""]
 MinecraftDiscordAccountUnlinkedConsoleCommands: ["", "", ""]
 MinecraftDiscordAccountLinkedRoleNameToAddUserTo: "Linked"
 MinecraftDiscordAccountLinkedAllowRelinkBySendingANewCode: false
 
-# Minecraft -> Discord nickname synchronization
+# Minecraft-Discord név egyeztetése
 #
-# NicknameSynchronizationEnabled: whether or not to set the discord user's nickname to the nickname format automatically
-# NicknameSynchronizationCycleTime: amount of minutes between repeatedly triggering synchronization for all online players
-# NicknameSynchronizationFormat: the nickname format (keep in mind this shouldn't go over 32 characters)
-# %displayname%: player's display name
-#                 example: Jeb
-# %username%:    player's username
-#                 example: Jeb_
-# PlaceholderAPI placeholders are supported for the values
+# NicknameSynchronizationEnabled: egyeztetés bekapcsolása
+# NicknameSynchronizationCycleTime: idő percekben, amíg a robot egyezteti a neveket
+# NicknameSynchronizationFormat: a név formátuma (ez nem haladhatja meg a 32 karaktert)
+# %displayname%: a játékos megjelenített neve
+# példa: Jeb
+# %username%: játékos felhasználóneve
+# példa: Jeb_
+# PlaceholderAPI-t támogat
 #
 NicknameSynchronizationEnabled: false
 NicknameSynchronizationCycleTime: 3
 NicknameSynchronizationFormat: "%displayname%"
 
-# Minecraft group -> Discord role synchronization
+# Minecraft-os rang és Discord-os rang egyeztetése
 #
-# GroupRoleSynchronizationRoleIdsToSync: these are Discord role IDs that you want to be synchronized from Minecraft to Discord
-#                                         if a role ID is not here, the permission for it (discordsrv.sync.[role id]) is effectively useless
-#                                         to get your Discord guild's role IDs, run "/discord debug" and look at the first section
-# GroupRoleSynchronizationCycleTime: amount of minutes between repeatedly triggering synchronization for all online players
-# GroupRoleSynchronizationRemoveRolesOnUnlink: whether or not to remove synced roles from a Discord user when unlinking accounts
+# GroupRoleSynchronizationRoleIdsToSync: ezek Discord-os rangok azonosítói, amelyeket egyeztetni szeretnél a Minecraft és a Discord között.
+# ha egy rangazonosító nincs itt, akkor ennek a kiváltságai (discordsrv.sync.[rang azonosítója]) lényegében felesleges
+# "/discord debug" a rangok azonosítának megszerzéséhez
+# GroupRoleSynchronizationCycleTime: idő percekben, amíg a robot egyezteti a rangokat
+# GroupRoleSynchronizationRemoveRolesOnUnlink: az egyeztetett rangok eltávolítása Discord-felhasználóktól a fiókok szétkapcsolásakor
 #
 GroupRoleSynchronizationRoleIdsToSync: ["000000000000000000", "000000000000000000", "000000000000000000"]
 GroupRoleSynchronizationCycleTime: 5
 GroupRoleSynchronizationRemoveRolesOnUnlink: true
 
-# Server watchdog
+# Szerverfigyelő
 #
-# The watchdog constantly monitors the last time your server performed a game tick
-# If the time since the last tick goes above the set interval in seconds, Discord messages can be triggered
+# Folyamatosan figyeli a szerver legutóbbi játékjelzését (game tick)
+# Ha az utolsó jelzés óta eltelt idő másodpercenként meghaladja a beállított időt, akkor Discord-on üzenetet küld
 #
-# ServerWatchdogEnabled: whether or not the watchdog is enabled at all
-# ServerWatchdogTimeout: time in seconds that need to elapse before the watchdog takes action (Spigot's crash detection uses 60 for this)
-#                        the minimum for this value is 10
-# ServerWatchdogMessageCount: the amount of times ServerWatchdogMessage is sent. useful if you *really* want to make sure you know something's up
+# ServerWatchdogEnabled: ennek bekapcsolása
+# ServerWatchdogTimeout: idő másodpercben, amelynek el kell telnie, mielőtt a elküldené az üzenetet (a Spigot összeomlásfigyelője 60-at használ erre a célra)
+# ennek az értéknek legalább 10-nek kell lennie
+# ServerWatchdogMessageCount: küldött üzenetek száma, ha *tényleg* szeretnéd tudni hogy baj van
 #
 ServerWatchdogEnabled: true
 ServerWatchdogTimeout: 30
 ServerWatchdogMessageCount: 3
 
-# Ban synchronization
-# When a player gets banned on the server when they have a linked Discord account you can optionally ban them on the Discord server and vice versa
+# Kitiltások egyeztetése
+# Ha egy játékost kitiltanak a szerveren, és van összekapcsolt Discord-fiókjuk, akkor kitiltja őt Discord-on is, és fordítva
 #
-# BanSynchronizationDiscordToMinecraft: whether or not to ban people on the Minecraft server if they get banned from the Discord server
-# BanSynchronizationDiscordToMinecraftReason: the message to be used as the ban reason for banning players from the Minecraft server
-# BanSynchronizationMinecraftToDiscord: whether or not to ban people on the Discord server if they get banned from the Minecraft server
+# BanSynchronizationDiscordToMinecraft: kitiltja-e az embereket a Minecraft-szerveren vagy sem, ha kitiltják őket a Discord-szerverről
+# BanSynchronizationDiscordToMinecraftReason: az az üzenet, amelyet a játékosok Minecraft szerverről történő kitiltás okának kapnak
+# BanSynchronizationMinecraftToDiscord: kitiltja-e az embereket a Discord-szerveren, ha kitiltják őket a Minecraft-szerverről
 #
 BanSynchronizationDiscordToMinecraft: false
-BanSynchronizationDiscordToMinecraftReason: "&cYou have been banned until further notice from the server because you were banned on our Discord server."
+BanSynchronizationDiscordToMinecraftReason: "&cKi lettél tiltva Discord-on."
 BanSynchronizationMinecraftToDiscord: false
